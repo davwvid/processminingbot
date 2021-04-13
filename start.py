@@ -21,11 +21,11 @@ def results():
       "card": {
         "title": "card title",
         "subtitle": "card text",
-        "imageUri": "https://example.com/images/example.png",
+        "imageUri": "https://www.promatis.ch/wp-content/uploads/sites/14/2018/07/Celonis_Process_Mining.jpg",
         "buttons": [
           {
             "text": "button text",
-            "postback": "https://example.com/path/for/end-user/to/follow"
+            "postback": "https://www.promatis.ch/2018/06/22/process-mining-erkennen-und-verstehen-bedeutet-verbessern/"
           }
         ]
       }
