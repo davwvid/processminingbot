@@ -15,7 +15,23 @@ def webhook ():
 
 def results():
     result = "This is a result"
-    return {'fulfillmentText': result}
+    return {
+  "fulfillmentMessages": [
+    {
+      "card": {
+        "title": "card title",
+        "subtitle": "card text",
+        "imageUri": "https://example.com/images/example.png",
+        "buttons": [
+          {
+            "text": "button text",
+            "postback": "https://example.com/path/for/end-user/to/follow"
+          }
+        ]
+      }
+    }
+  ]
+}
 
 
 if __name__ == "__main__":
