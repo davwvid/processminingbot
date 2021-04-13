@@ -17,7 +17,10 @@ def webhook ():
     return make_response(jsonify(results()))
 
 def results():
-    return {'fulfillmentText': 'test'}
+
+    result = "This is a result"
+
+    return {'fulfillmentText': result}
 
 
 if __name__ == "__main__":
