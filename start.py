@@ -2,7 +2,7 @@ import pandas
 import pm4py
 from flask import Flask, request, make_response, jsonify
 
-app = flask.Flask(__name__)			
+app = Flask(__name__)			
 
 @app.route('/')
 @app.route('/home')
