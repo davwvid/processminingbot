@@ -6,11 +6,12 @@ import os
 app = flask.Flask(__name__)			
 
 @app.route('/')
-def index():
-    return 'Index Page'
+@app.route('/home')
+def home():
+    return "Hallo World"
 
 if __name__ == "__main__":
-    app.run()		
+    app.run()	
 
     
 def import_csv(file_path):
