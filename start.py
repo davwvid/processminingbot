@@ -2,9 +2,17 @@ import pandas
 import pm4py
 import flask
 import os
-from flask import send_from_directory
 
+app = flask.Flask(__name__)			
 
+@app.route('/')
+def index():
+    return 'Index Page'
+
+if __name__ == "__main__":
+    app.run()		
+
+    
 def import_csv(file_path):
     event_log = pandas.read_csv(file_path, sep=';')
     num_events = len(event_log)
@@ -24,10 +32,3 @@ def showBPMN(file_path):
     bpmn_model = pm4py.convert_to_bpmn(process_tree)
     pm4py.view_bpmn(bpmn_model)
   
-if __name__ == "__main__":
-    app.run()
-						
-
-@app.route('/')
-def index():
-    return 'Index Page'
