@@ -1,9 +1,6 @@
 import pandas
 import pm4py
-import flask
-import os
-import jsonify
-import make-response
+from flask import Flask, request, make_response, jsonify
 
 app = flask.Flask(__name__)			
 
