@@ -4,7 +4,6 @@ import flask
 import os
 import jsonify
 import make_response
-import request
 
 app = flask.Flask(__name__)			
 
