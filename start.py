@@ -1,5 +1,8 @@
 import pandas
 import pm4py
+import flask
+import os
+from flask import send_from_directory
 
 
 def import_csv(file_path):
@@ -22,6 +25,9 @@ def showBPMN(file_path):
     pm4py.view_bpmn(bpmn_model)
   
 if __name__ == "__main__":
-    showPetri('E:/PM/running-example.xes')
+    app.run()
 						
 
+@app.route('/')
+def index():
+    return 'Index Page'
