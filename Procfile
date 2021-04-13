@@ -1,1 +1,1 @@
-worker: python start.py
+web: gunicron start:app --log-file -
