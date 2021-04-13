@@ -2,6 +2,9 @@ import pandas
 import pm4py
 import flask
 import os
+import jsonify
+import make_response
+import request
 
 app = flask.Flask(__name__)			
 
@@ -9,6 +12,14 @@ app = flask.Flask(__name__)
 @app.route('/home')
 def home():
     return "Hallo World"
+
+@app.route('/webhook', methods=['GET', 'POST'])
+def webhook ():
+    return make_response(jsonify(results()))
+
+def results():
+    return {'fulfillmentText': 'test'}
+
 
 if __name__ == "__main__":
     app.run()	
