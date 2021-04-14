@@ -2,10 +2,8 @@ import pandas
 import pm4py
 from flask import Flask, request, make_response, jsonify, render_template
 
-UPLOAD_FOLDER = '/uploads'
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
-
 app = Flask(__name__)			
+app.config['/uploads']
 
 @app.route('/')
 @app.route('/home')
@@ -15,6 +13,10 @@ def home():
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook ():
     return make_response(jsonify(results()))
+
+@app.route('/upload')
+def upload_page():
+   return render_template('upload.html')
 
 def results():
     result = "This is a result"
@@ -40,11 +42,3 @@ def results():
 if __name__ == "__main__":
     app.run()	
 
-@app.route('/upload')
-def upload_page():
-   return render_template('upload.html')
-
-@app.route('/uploader', methods = ['GET', 'POST'])
-def upload_file():
-   
-      return 'file uploaded successfully'
