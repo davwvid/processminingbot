@@ -1,6 +1,7 @@
 import pandas
 import pm4py
 from flask import Flask, request, make_response, jsonify, render_template
+from werkzeug import secure_filename
 
 app = Flask(__name__)			
 
