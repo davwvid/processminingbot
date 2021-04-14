@@ -19,7 +19,6 @@ def upload_file():
 
 @app.route('/uploader', methods = ['GET', 'POST'])
 def upload_files():
-   if request.method == 'POST':
      
       return 'file uploaded successfully'
 
