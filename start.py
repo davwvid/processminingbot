@@ -1,8 +1,13 @@
+import os
 import pandas
 import pm4py
 from flask import Flask, request, make_response, jsonify, render_template
+from werkzeug.utils import secure_filename
+
+UPLOAD_FOLDER = '/path/to/the/uploads'
 
 app = Flask(__name__)			
+
 
 @app.route('/')
 @app.route('/home')
@@ -19,8 +24,23 @@ def upload_file():
 
 @app.route('/uploader', methods = ['GET', 'POST'])
 def upload_files():
-     
-      return 'file uploaded successfully'
+    if request.method == 'POST':
+      filename = secure_filename(file.filename)
+      file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+      return render_template("upload-success.html")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def results():
     result = "This is a result"
