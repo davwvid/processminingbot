@@ -1,7 +1,6 @@
 import pandas
 import pm4py
 from flask import Flask, request, make_response, jsonify, render_template
-from werkzeug import secure_filename
 
 app = Flask(__name__)			
 
@@ -14,8 +13,8 @@ def home():
 def webhook ():
     return make_response(jsonify(results()))
 
-@app.route('/uploadfile')
-def upload():
+@app.route('/upload')
+def upload_file():
    return render_template("upload.html")
 
 @app.route('/uploader', methods = ['GET', 'POST'])
