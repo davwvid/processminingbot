@@ -4,10 +4,10 @@ import pm4py
 from flask import Flask, request, make_response, jsonify, render_template
 from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = '/path/to/the/uploads'
+UPLOAD_FOLDER = './uploads'
 
 app = Flask(__name__)			
-
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 @app.route('/home')
@@ -18,21 +18,17 @@ def home():
 def webhook ():
     return make_response(jsonify(results()))
 
-@app.route('/upload')
+@app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
-   return render_template("upload.html")
-
-@app.route('/uploader', methods = ['GET', 'POST'])
-def upload_files():
-    if request.method == 'POST':
+  if request.method == 'POST':
+    file = request.files['file']
+    if file:
       filename = secure_filename(file.filename)
-      file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-      return render_template("upload-success.html")
+      file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))   
+      return render_template("success.html")
 
-
-
-
-
+  return render_template("upload.html")
+   
 
 
 
@@ -48,13 +44,11 @@ def results():
   "fulfillmentMessages": [
     {
       "card": {
-        "title": "card title",
-        "subtitle": "card text",
-        "imageUri": "https://www.promatis.ch/wp-content/uploads/sites/14/2018/07/Celonis_Process_Mining.jpg",
+        "title": "Upload File",
         "buttons": [
           {
-            "text": "button text",
-            "postback": "https://www.promatis.ch/2018/06/22/process-mining-erkennen-und-verstehen-bedeutet-verbessern/"
+            "text": "Upload here",
+            "postback": "https://processminingbot.herokuapp.com/upload"
           }
         ]
       }
@@ -64,5 +58,5 @@ def results():
 
 
 if __name__ == "__main__":
-    app.run()	
+    app.run(debug=True)	
 
