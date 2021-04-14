@@ -38,10 +38,10 @@ if __name__ == "__main__":
     app.run()	
 
 @app.route('/upload')
-def upload_file():
+def upload_page():
    return render_template('upload.html')
 
-  @app.route('/uploader', methods = ['GET', 'POST'])
+@app.route('/uploader', methods = ['GET', 'POST'])
 def upload_file():
    if request.method == 'POST':
       f = request.files['file']
