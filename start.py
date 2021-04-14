@@ -3,7 +3,6 @@ import pm4py
 from flask import Flask, request, make_response, jsonify, render_template
 
 app = Flask(__name__)			
-app.config['/uploads']
 
 @app.route('/')
 @app.route('/home')
