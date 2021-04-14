@@ -13,7 +13,7 @@ def home():
 def webhook ():
     return make_response(jsonify(results()))
 
-@app.route('/upload')
+@app.route('/uploadfile')
 def upload():
    return render_template("upload.html")
 
