@@ -14,8 +14,8 @@ def webhook ():
     return make_response(jsonify(results()))
 
 @app.route('/upload')
-def upload_page():
-   return render_template('upload.html')
+def upload():
+   return render_template("upload.html")
 
 def results():
     result = "This is a result"
