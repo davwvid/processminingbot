@@ -35,13 +35,14 @@ def results():
     return   {"fulfillment_messages": [{
     "payload": {
       "richContent": [
-        [{
-          "type": "chips",
-          "options": [{
-            "text": "Empezar!"
-          }]
-        }]
-      ]
+    [
+      {
+        "type": "image",
+        "rawUrl": "https://example.com/images/logo.png",
+        "accessibilityText": "Example logo"
+      }
+    ]
+  ]
     }
   }]}
 
