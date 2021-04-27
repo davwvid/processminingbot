@@ -38,6 +38,7 @@ def results():
     [
       {
         "type": "button",
+        "icon": {},
         "text": "Upload",
         "link": "https://processminingbot.herokuapp.com/upload",
         "event": {
