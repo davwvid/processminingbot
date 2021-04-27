@@ -38,7 +38,7 @@ def results():
     [
       {
         "type": "image",
-        "rawUrl": "https://example.com/images/logo.png",
+        "rawUrl": "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
         "accessibilityText": "Example logo"
       }
     ]
