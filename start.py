@@ -13,7 +13,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route('/')
 @app.route('/home')
 def home():
-    return {}
+    return {render_template("home.html")}
 
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook ():
