@@ -38,17 +38,8 @@ def results():
     [
       {
         "type": "button",
-        "icon": {
-          "type": "chevron_right",
-          "color": "#FF9800"
-        },
-        "text": "Button text",
-        "link": "https://example.com",
-        "event": {
-          "name": "",
-          "languageCode": "",
-          "parameters": {}
-        }
+        "text": "Upload",
+        "link": "https://processminingbot.herokuapp.com/upload"
       }
     ]
   ]
