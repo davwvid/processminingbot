@@ -32,26 +32,18 @@ def upload_file():
 
 def results():
     result = "This is a result"
-    return {
-  "richContent": [
-    [
-      {
-        "type": "button",
-        "icon": {
-          "type": "chevron_right",
-          "color": "#FF9800"
-        },
-        "text": "Button text",
-        "link": "https://example.com",
-        "event": {
-          "name": "",
-          "languageCode": "",
-          "parameters": {}
-        }
-      }
-    ]
-  ]
-}
+    return   "fulfillment_messages": [{
+    "payload": {
+      "richContent": [
+        [{
+          "type": "chips",
+          "options": [{
+            "text": "Empezar!"
+          }]
+        }]
+      ]
+    }
+  }]
 
 
 if __name__ == "__main__":
