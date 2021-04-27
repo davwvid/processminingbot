@@ -32,7 +32,7 @@ def upload_file():
 
 def results():
     result = "This is a result"
-    return   "fulfillment_messages": [{
+    return   {"fulfillment_messages": [{
     "payload": {
       "richContent": [
         [{
@@ -43,7 +43,7 @@ def results():
         }]
       ]
     }
-  }]
+  }]}
 
 
 if __name__ == "__main__":
