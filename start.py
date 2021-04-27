@@ -33,20 +33,15 @@ def upload_file():
 def results():
     result = "This is a result"
     return {
-  "payload": {
-    "google": {
-      "expectUserResponse": true,
-      "richResponse": {
-        "items": [
-          {
-            "simpleResponse": {
-              "textToSpeech": "this is a simple response"
-            }
-          }
-        ]
+  "richContent": [
+    [
+      {
+        "type": "image",
+        "rawUrl": "https://example.com/images/logo.png",
+        "accessibilityText": "Example logo"
       }
-    }
-  }
+    ]
+  ]
 }
 
 
