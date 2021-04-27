@@ -37,9 +37,18 @@ def results():
       "richContent": [
     [
       {
-        "type": "image",
-        "rawUrl": "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
-        "accessibilityText": "Example logo"
+        "type": "button",
+        "icon": {
+          "type": "chevron_right",
+          "color": "#FF9800"
+        },
+        "text": "Button text",
+        "link": "https://example.com",
+        "event": {
+          "name": "",
+          "languageCode": "",
+          "parameters": {}
+        }
       }
     ]
   ]
