@@ -36,9 +36,12 @@ def results():
   "richContent": [
     [
       {
-        "type": "image",
-        "rawUrl": "https://example.com/images/logo.png",
-        "accessibilityText": "Example logo"
+        "type": "description",
+        "title": "Description title",
+        "text": [
+          "This is text line 1.",
+          "This is text line 2."
+        ]
       }
     ]
   ]
