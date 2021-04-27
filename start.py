@@ -33,19 +33,20 @@ def upload_file():
 def results():
     result = "This is a result"
     return {
-  "fulfillmentMessages": [
-    {
-      "card": {
-        "title": "Upload File",
-        "buttons": [
+  "payload": {
+    "google": {
+      "expectUserResponse": true,
+      "richResponse": {
+        "items": [
           {
-            "text": "Upload here",
-            "postback": "https://processminingbot.herokuapp.com/upload"
+            "simpleResponse": {
+              "textToSpeech": "this is a simple response"
+            }
           }
         ]
       }
     }
-  ]
+  }
 }
 
 
