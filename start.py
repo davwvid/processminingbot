@@ -33,25 +33,23 @@ def upload_file():
 def results():
     result = "This is a result"
     return {
-  "title": string,
-  "subtitle": string,
-  "image": {
-    object (Image)
-  },
-  "columnProperties": [
-    {
-      object (ColumnProperties)
-    }
-  ],
-  "rows": [
-    {
-      object (TableCardRow)
-    }
-  ],
-  "buttons": [
-    {
-      object (Button)
-    }
+  "richContent": [
+    [
+      {
+        "type": "button",
+        "icon": {
+          "type": "chevron_right",
+          "color": "#FF9800"
+        },
+        "text": "Button text",
+        "link": "https://example.com",
+        "event": {
+          "name": "",
+          "languageCode": "",
+          "parameters": {}
+        }
+      }
+    ]
   ]
 }
 
