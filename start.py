@@ -13,7 +13,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route('/')
 @app.route('/home')
 def home():
-    return {render_template("home.html")}
+    return render_template("home.html")
 
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook ():
@@ -33,17 +33,25 @@ def upload_file():
 def results():
     result = "This is a result"
     return {
-  "richContent": [
-    [
-      {
-        "type": "description",
-        "title": "Description title",
-        "text": [
-          "This is text line 1.",
-          "This is text line 2."
-        ]
-      }
-    ]
+  "title": string,
+  "subtitle": string,
+  "image": {
+    object (Image)
+  },
+  "columnProperties": [
+    {
+      object (ColumnProperties)
+    }
+  ],
+  "rows": [
+    {
+      object (TableCardRow)
+    }
+  ],
+  "buttons": [
+    {
+      object (Button)
+    }
   ]
 }
 
