@@ -39,7 +39,12 @@ def results():
       {
         "type": "button",
         "text": "Upload",
-        "link": "https://processminingbot.herokuapp.com/upload"
+        "link": "https://processminingbot.herokuapp.com/upload",
+        "event": {
+          "name": "",
+          "languageCode": "",
+          "parameters": {}
+        }
       }
     ]
   ]
