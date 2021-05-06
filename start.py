@@ -22,11 +22,12 @@ def webhook ():
 
   request_data = request.get_json()
   tag = request_data["queryResult"]["intent"]["displayName"]
-  print(tag)
+
+  if tag == "Experience - yes":
+    return make_response(jsonify(text_response("Test Response")))
 
 
-
-  return make_response(jsonify(text_response("Test Response")))
+  return make_response(jsonify(text_response("default")))
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
