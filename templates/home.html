@@ -1,6 +1,6 @@
 <html>
    <head>
-      <link href="css/style.css" rel="stylesheet">
+      <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
    </head>
    <body>
     
@@ -12,7 +12,7 @@
          language-code="en"
       ></df-messenger>
 
-      <img id='image' style="width: 90%; margin: auto;" src="{{ url_for('static', filename='images/company.png') }}" alt="The Coding Interface">
+    
 
    </body>
 </html>
