@@ -35,38 +35,6 @@ def upload_file():
 
   return render_template("upload.html")
 
-def results():
-    result = "This is a result"
-    return   {"fulfillment_messages": [{
-    "payload": {
-      "richContent": [
-    [
-      {
-        "type": "button",
-        "icon": {},
-        "text": "Upload",
-        "link": "https://processminingbot.herokuapp.com/upload",
-        "event": {
-          "name": "",
-          "languageCode": "",
-          "parameters": {}
-        }
-      }
-    ]
-  ]
-    }
-  }]}
-
-def fileUploadJSON():
-  return {
-  "fulfillment_response": {
-    "messages": [{
-      "text": "text"
-    }]
-  }
- 
-
-
 if __name__ == "__main__":
     app.run(debug=True)	
 
