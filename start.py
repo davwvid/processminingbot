@@ -21,7 +21,7 @@ def home():
 def webhook ():
 
   request_data = request.get_json()
-  tag = request_data['intent']['displayName']
+  tag = request_data
   print(tag)
 
   return make_response(jsonify(text_response("Test Response")))
