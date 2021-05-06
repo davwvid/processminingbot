@@ -11,13 +11,10 @@ def text_response(text):
 
 def fileupload_response():
   return {
-    "richContent": [
+    "fulfillmentMessages": [
+      {
+        "richContent": [
       [
-        {
-          "text": {
-            "text": "Please upload your log file"
-          }
-        },
         {
           "type": "button",
           "icon": {
@@ -33,5 +30,7 @@ def fileupload_response():
           }
         }
       ]
+    ]
+      }
     ]
   }
