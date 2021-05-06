@@ -9,7 +9,7 @@ from json_response import text_response, fileupload_response, image_response
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'csv', 'xes'}
 
-app = Flask('ProcessMiningBot', static_url_path='/assets')			
+app = Flask('ProcessMiningBot', static_url_path='/assets', static_folder='assets')			
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
