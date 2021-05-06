@@ -11,26 +11,23 @@ def text_response(text):
 
 def fileupload_response():
   return {
-    "fulfillmentMessages": [
-      {
+    "fulfillment_messages": [{
+      "payload": {
         "richContent": [
-      [
-        {
-          "type": "button",
-          "icon": {
-            "type": "chevron_right",
-            "color": "#FF9800"
-          },
-          "text": "Go to file upload",
-          "link": "https://processminingbot.herokuapp.com/upload.html",
-          "event": {
-            "name": "",
-            "languageCode": "",
-            "parameters": {}
-          }
-        }
-      ]
-    ]
+          [
+            {
+              "type": "button",
+              "icon": {},
+              "text": "Upload",
+              "link": "https://processminingbot.herokuapp.com/upload",
+              "event": {
+                "name": "",
+                "languageCode": "",
+                "parameters": {}
+              }
+            }
+          ]
+        ]
       }
-    ]
+    }]
   }
