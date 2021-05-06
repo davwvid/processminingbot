@@ -15,7 +15,7 @@ def fileupload_response():
       [
         {
           "text": {
-            "text": [text]
+            "text": "Please upload your log file"
           }
         },
         {
