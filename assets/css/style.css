@@ -1,4 +1,4 @@
 body {
-    background-image: url("company.png");
+    background-image: url("{{ url_for('static', filename='images/company.png') }}");
     background-color: #333;
 }
