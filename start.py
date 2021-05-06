@@ -21,8 +21,7 @@ def home():
 def webhook ():
 
   request_data = request.get_json()
-  tag = request_data['fulfillmentInfo']['tag']
-  print(tag)
+  print(request_data)
 
   return make_response(jsonify(fileUpload_response()))
 
