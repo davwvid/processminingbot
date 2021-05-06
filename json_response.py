@@ -15,6 +15,11 @@ def fileupload_response():
       {
         "payload": {
           "richContent": [
+             {
+        "text": {
+          "text": [text]
+        }
+      },
             [
               {
                 "type": "button",
