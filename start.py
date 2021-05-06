@@ -19,7 +19,7 @@ def home():
 def webhook ():
 
   request_data = request.get_json()
-  print(request_data)
+  print(request_data.request_data['fulfillmentInfo']['tag'])
 
   return make_response(jsonify(results()))
 
