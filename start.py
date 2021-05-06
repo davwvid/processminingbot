@@ -21,9 +21,10 @@ def home():
 def webhook ():
 
   request_data = request.get_json()
-  print(request_data)
+  tag = request_data['intent']['displayName']
+  print(tag)
 
-  return make_response(jsonify(fileUpload_response()))
+  return make_response(jsonify(text_response("Test Response" + tag)))
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():

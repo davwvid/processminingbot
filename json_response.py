@@ -1,11 +1,9 @@
-def fileUpload_response():
+def text_response(text):
   return {
     "fulfillmentMessages": [
       {
         "text": {
-          "text": [
-            "Text response from webhook"
-          ]
+          "text": [text]
         }
       }
     ]
