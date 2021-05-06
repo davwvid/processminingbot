@@ -59,11 +59,12 @@ def results():
 
 def fileUploadJSON():
   return {
-  "responseId": "string",
-  "queryResult": {
-     "text": "string",
+  "fulfillment_response": {
+    "messages": [{
+      "text": "text"
+    }]
   }
-}
+ 
 
 
 if __name__ == "__main__":
