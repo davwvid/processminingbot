@@ -9,6 +9,19 @@ def text_response(text):
     ]
   }
 
+def image_response():
+  return {
+    "richContent": [
+      [
+        {
+          "type": "image",
+          "rawUrl": "company.png",
+          "accessibilityText": "Process Discovery Result"
+        }
+      ]
+    ]
+  }
+
 def fileupload_response():
   return {
     "fulfillment_messages": [

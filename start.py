@@ -4,7 +4,7 @@ import pm4py
 from flask import Flask, request, flash, make_response, jsonify, render_template
 from werkzeug.utils import secure_filename
 
-from json_response import text_response, fileupload_response
+from json_response import text_response, fileupload_response, image_response
 
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'csv', 'xes'}
@@ -25,6 +25,9 @@ def webhook ():
 
   if tag == "Experience - yes":
     return make_response(jsonify(fileupload_response()))
+
+  if tag == "DefaultSettings":
+    return make_response(jsonify(image_response()))
 
 
   return make_response(jsonify(text_response("default")))
