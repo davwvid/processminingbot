@@ -1,7 +1,12 @@
 def fileUpload_response():
   return {
-    "responseId": "string",
-    "queryResult": {
-      "text": string
-    }
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "Text response from webhook"
+          ]
+        }
+      }
+    ]
   }
