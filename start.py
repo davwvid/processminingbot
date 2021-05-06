@@ -4,7 +4,7 @@ import pm4py
 from flask import Flask, request, flash, make_response, jsonify, render_template
 from werkzeug.utils import secure_filename
 
-from json_response import text_response
+from json_response import text_response, fileupload_response
 
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'csv', 'xes'}
