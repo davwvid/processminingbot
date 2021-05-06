@@ -11,14 +11,20 @@ def text_response(text):
 
 def image_response():
   return {
-    "richContent": [
-      [
-        {
-          "type": "image",
-          "rawUrl": "company.png",
-          "accessibilityText": "Process Discovery Result"
+    "fulfillment_messages": [
+      {
+        "payload": {
+          "richContent": [
+            [
+              {
+                "type": "image",
+                "rawUrl": "company.png",
+                "accessibilityText": "Process Discovery Result"
+              }
+            ]
+          ]
         }
-      ]
+      }
     ]
   }
 
