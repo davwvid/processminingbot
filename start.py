@@ -19,9 +19,10 @@ def home():
 def webhook ():
 
   request_data = request.get_json()
-  print(request_data.request_data['fulfillmentInfo']['tag'])
+  tag = request_data['fulfillmentInfo']['tag']
+  print(tag)
 
-  return make_response(jsonify(results()))
+  return make_response(jsonify(fileUploadJSON()))
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
@@ -55,6 +56,14 @@ def results():
   ]
     }
   }]}
+
+def fileUploadJSON():
+  return {
+  "responseId": "string",
+  "queryResult": {
+     "text": "string",
+  }
+}
 
 
 if __name__ == "__main__":
