@@ -17,7 +17,11 @@ def home():
 
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook ():
-    return make_response(jsonify(results()))
+
+  data = request.get_json()
+  print(data)
+
+  return make_response(jsonify(results()))
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
