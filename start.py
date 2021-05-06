@@ -18,8 +18,8 @@ def home():
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook ():
 
-  data = request.get_json()
-  print(data)
+  request_data = request.get_json()
+  print(request_data)
 
   return make_response(jsonify(results()))
 
