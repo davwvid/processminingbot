@@ -24,7 +24,7 @@ def webhook ():
   tag = request_data["queryResult"]["intent"]["displayName"]
 
   if tag == "Experience - yes":
-    return make_response(jsonify(text_response("Test Response")))
+    return make_response(jsonify(fileupload_response()))
 
 
   return make_response(jsonify(text_response("default")))
