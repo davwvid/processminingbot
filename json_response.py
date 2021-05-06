@@ -1,4 +1,4 @@
-def fileUploadJSON():
+def fileUpload_response():
   return {
     "fulfillment_response": {
       "messages": [{

@@ -4,6 +4,8 @@ import pm4py
 from flask import Flask, request, flash, make_response, jsonify, render_template
 from werkzeug.utils import secure_filename
 
+from json_response import fileUpload_response
+
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'csv', 'xes'}
 
@@ -22,7 +24,7 @@ def webhook ():
   tag = request_data['fulfillmentInfo']['tag']
   print(tag)
 
-  return make_response(jsonify(fileUploadJSON()))
+  return make_response(jsonify(fileUpload_response()))
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
