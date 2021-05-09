@@ -17,7 +17,7 @@ def home():
 def webhook ():
 
   request_data = request.get_json()
-  pritn(request)
+  print(request)
   #tag = request_data["queryResult"]["intent"]["displayName"]
 
   if tag == "Experience - yes":
