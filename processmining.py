@@ -1,9 +1,12 @@
 import pm4py
 
 
-def mining(miner, view):
+def mining(file, miner, view):
     
-    log = pm4py.read_xes('uploads\running-example.csv')
+    if file == "1":
+      log = pm4py.read_xes('assets\running-example.xes')
+    else:
+       log = pm4py.read_xes('assets\running-example-just-two.cases.xes')
     
     petri_net, initial_marking, final_marking = discoverProcess(miner, log)
     return visualizeProcess(view, petri_net, initial_marking, final_marking)
