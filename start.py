@@ -20,7 +20,7 @@ def webhook ():
   request_data = request.get_json()
 
   tag = request_data["fulfillmentInfo"]["tag"]
-  param_file = request_data["sessionInfo"]["parameters"]["number"]
+  number = request_data["sessionInfo"]["parameters"]["number"]
   algorithm = request_data["sessionInfo"]["parameters"]["algorithm"]
   visualization = request_data["sessionInfo"]["parameters"]["visualization"]
 
