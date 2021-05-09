@@ -18,12 +18,14 @@ def home():
 def webhook ():
 
   request_data = request.get_json()
-  print(request_data)
-  #tag = request_data["queryResult"]["intent"]["displayName"]
-  tag = ""
 
-  if tag == "Experience - yes":
-    mining()
+  tag = request_data["fulfillmentInfo"]["tag"]
+  param_file = request_data["sessionInfo"]["parameters"]["number"]
+  algorithm = request_data["sessionInfo"]["parameters"]["algorithm"]
+  visualization = request_data["sessionInfo"]["parameters"]["visualization"]
+
+  if tag == "startmining":
+    mining(algorithm, visualization)
     return make_response(jsonify(text_response("success")))
 
   return make_response(jsonify(text_response("error")))
