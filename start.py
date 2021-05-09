@@ -25,7 +25,7 @@ def webhook ():
   visualization = request_data["sessionInfo"]["parameters"]["visualization"]
 
   if tag == "startmining":
-    mining(algorithm, visualization)
+    mining(number, algorithm, visualization)
     return make_response(jsonify(text_response("success")))
 
   return make_response(jsonify(text_response("error")))
